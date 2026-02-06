@@ -25,6 +25,13 @@ function App() {
     });
   };
 
+  const resetForm = () => {
+    setSystemCost("");
+    setMonthlyBill("");
+    setElectricityRate("0.13");
+    setResult(null);
+  };
+
   return (
     <div className="calculator">
       <h1>Solar ROI Calculator</h1>
@@ -83,6 +90,19 @@ function App() {
             <strong>${result.twentyYearROI}</strong>
           </div>
         </div>
+      )}
+
+      {result && (
+        <button
+          type="button"
+          onClick={resetForm}
+          style={{
+            marginTop: "1rem",
+            background: "linear-gradient(135deg, #6b7280 0%, #4b5563 100%)",
+          }}
+        >
+          Reset Calculator
+        </button>
       )}
     </div>
   );
