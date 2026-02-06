@@ -13,7 +13,7 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f8f9fa;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -76,6 +76,8 @@ h1 {
   font-family: "Inter", sans-serif;
   transition: all 0.2s;
   background: #f9fafb;
+  color: #9ca3af;
+  opacity: 1;
 }
 
 .form-group input:focus {
@@ -83,6 +85,11 @@ h1 {
   border-color: #f59e0b;
   background: white;
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
 }
 
 button {
